@@ -1,0 +1,29 @@
+<%- include('layout/header.ejs') %>
+
+   <div class="container">
+     <div class="row justify-content-center">
+       <div class="col-4 mb-3">
+         <div class="background mb-4">
+            <% if(result.profile === 'default'){ %>
+              <ion-icon name="person" class="user-default"></ion-icon>
+            <% }else { %>
+              <img src="images/<%=result.profile%>" class="img-fluid">
+            <% } %>
+         </div>
+         <ul class="list-group mb-4">
+          <li class="list-group-item"><strong>Nama :</strong> <%=result.nama %></li>
+          <li class="list-group-item"><strong>Nama Panggilan :</strong> <%=result.namaPanggilan %></li>
+          <li class="list-group-item"><strong>Email :</strong> <%=result.email %></li>
+          <li class="list-group-item"><strong>Jenis Kelamin :</strong> <%=result.jenisKelamin %></li>
+        </ul>
+        <div class="flex">
+            <a href="/" style="color:#5aad6c;"> &laquo; Back to home</a>
+            <a href="/update-user?id=<%= result.id %>" style="color:#5aad6c; float:right;">Edit</a>
+        </div>
+       </div>
+
+     </div>
+   </div>
+
+
+<%- include('layout/footer.ejs') %>

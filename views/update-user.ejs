@@ -1,0 +1,47 @@
+<%- include('layout/header.ejs') %>
+
+
+
+ <div class="container">
+   <h1 class="text-center" style="transform:translateY(-50px); color:#5aad6c;">Update User</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <form action="/update-user" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<%=user._id%>">
+          <div class="position-relative mb-5">
+            <input type="hidden" value="<%=user.profile%>" name="profileOld">
+            <input type="file" value="<%=user.profile%>" class="custom-file-input text" name="profile" id="profile">
+          </div>
+          <div class="mb-5 position-relative">
+            <input type="text" value="<%=user.nama%>" placeholder="Nama" class="text" id="nama" name="nama" required>
+          </div>
+          <div class="mb-5 position-relative">
+            <input type="text" value="<%=user.namaPanggilan%>" placeholder="Nama Panggilan" class="text" id="namaPanggilan" name="namaPanggilan" required>
+          </div>
+          <div class="mb-5 position-relative">
+
+            <input type="email"  value="<%=user.email%>" placeholder="Email" class="text" id="email" name="email" required>
+          </div>
+          <% if(user.jenisKelamin === '-') { %>
+            <div class="flex mb-5">
+                <input class="form-check-input" type="radio" name="jenisKelamin" value="Pria" id="pria">
+                <label class="form-check-label" for="pria">
+                  Pria
+                </label>
+                <input class="form-check-input ms-5" type="radio" value="Wanita" name="jenisKelamin" id="wanita">
+                <label class="form-check-label" for="wanita">
+                  Wanita
+                </label>
+            </div>
+          <% }else { %>
+          <div class="flex mb-5">
+              <input type="hidden" name="jenisKelamin" value="<%=user.jenisKelamin %>" id="pria">
+              <span class="fw-bold fs-6" style="color:#5aad6c">*gender cannot be changed</span>
+          </div>
+          <% } %>
+          <button type="submit" class="btn add-user">Update User</button>
+        </form>
+      </div>
+    </div>
+ </div>
+<%- include('layout/footer.ejs') %>

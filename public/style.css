@@ -1,0 +1,92 @@
+strong {
+  color: #5aad6c;
+}
+nav {
+  margin-bottom: 70px;
+}
+.container.add-user {
+  margin-bottom: 50px;
+}
+td .flex .btn {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.btn.add-user {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  color: #5aad6c;
+  font-weight: bold;
+}
+ion-icon {
+  font-size: 17px;
+}
+input {
+  outline: none;
+}
+input.input-search {
+  width: 50% !important;
+  margin-bottom: 20px;
+}
+.background {
+  width: 180px;
+  height: 180px;
+  border: 3px solid white;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+ion-icon.user-default {
+  font-size: 130px;
+  color: grey;
+}
+input.text {
+  width: 100%;
+  padding: 10px;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #5aad6c;
+}
+input.form-check-input {
+  border-color: #5aad6c !important;
+}
+input.form-check-input:checked {
+  background: #5aad6c;
+  border-color: #5aad6c !important;
+}
+button.add-user {
+  background: #5aad6c;
+  width: 100%;
+  color: white !important;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Upload Profile";
+  display: inline-block;
+  background: #5aad6c;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: white;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+img.img-fluid {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
